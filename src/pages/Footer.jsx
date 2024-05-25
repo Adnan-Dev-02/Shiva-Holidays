@@ -7,10 +7,10 @@ const Footer = () => {
             <div className="col-sm-4 p-3">
                 <div className=' d-flex align-items-center'>
                     <img src={Logo} alt="" height="30px" />
-                    <h5 className="d-inline m-1">Shiva Holidays</h5>
+                    <h5 className="d-inline m-1">Shiva Tours Group</h5>
                 </div>
                 <div className='mt-3'>
-                    <small className='text-secondary '>Shiva Holidays offers travel services across India, celebrating the spirit of adventure and cultural exploration.</small>
+                    <small className='text-secondary '>Shiva Tours Group offers travel services across India, celebrating the spirit of adventure and cultural exploration.</small>
                 </div>
             </div>
             <div className="col-sm-4 p-3">

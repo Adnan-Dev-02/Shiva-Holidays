@@ -26,9 +26,9 @@ function About() {
         </div>
       </div>
       <div className="row p-3 p-lg-5 container-fluid m-0">
-        <p>Shiva Holidays has years of experience pioneering tourism in inspiring destinations across South and Southeast Asia. Our expertise, insights, and personal experiences reflect the tailor-made itineraries we create for our valued clients. We take pride in crafting AMAZING ADVENTURE journeys that cater to every need and requirement.</p>
-        <p>Our journey begins in South Asia, a region that invokes mysticism and enchantment. From the ancient towns of Kathmandu to the spiritual monasteries in Thimphu, we offer travelers an overwhelming sense of excitement. As Oscar Wilde once said, “I never travel without my diary. One should always have something sensational to read in the train.” Let Shiva Holidays take you on a magnificent journey you’ll never forget.</p>
-        <p>Conservation and eco-tourism are integral to our values. We support projects that foster a sustainable business model. Our goal is to offer an authentic experience to every traveler, regardless of their background or origin. With quality, value, and trust at the core of our ethos, Shiva Holidays provides cultural and trekking experiences that leave lasting memories.</p>
+        <p>Shiva Tours Group has years of experience pioneering tourism in inspiring destinations across South and Southeast Asia. Our expertise, insights, and personal experiences reflect the tailor-made itineraries we create for our valued clients. We take pride in crafting AMAZING ADVENTURE journeys that cater to every need and requirement.</p>
+        <p>Our journey begins in South Asia, a region that invokes mysticism and enchantment. From the ancient towns of Kathmandu to the spiritual monasteries in Thimphu, we offer travelers an overwhelming sense of excitement. As Oscar Wilde once said, “I never travel without my diary. One should always have something sensational to read in the train.” Let Shiva Tours Group take you on a magnificent journey you’ll never forget.</p>
+        <p>Conservation and eco-tourism are integral to our values. We support projects that foster a sustainable business model. Our goal is to offer an authentic experience to every traveler, regardless of their background or origin. With quality, value, and trust at the core of our ethos, Shiva Tours Group provides cultural and trekking experiences that leave lasting memories.</p>
       </div>
       <Footer />
     </>

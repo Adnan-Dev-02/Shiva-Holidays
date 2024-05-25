@@ -11,7 +11,7 @@ const Layout = () => {
         <div class="container-fluid">
           <div class="col-sm-6 justify-content justify-content-center d-flex align-items-center">
             <img src={Logo} alt="" height="30px" />
-            <h1 class="navbar-brand d-inline m-1">Shiva Holidays</h1>
+            <h1 class="navbar-brand d-inline m-1">Shiva Tours Group</h1>
           </div>
           <div class="col-sm-6 text-center">
 
