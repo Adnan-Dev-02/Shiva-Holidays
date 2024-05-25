@@ -8,13 +8,6 @@ import chardham4 from './images/chardham4.jpg'
 
 const Contact = () => {
 
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-
-
-
-
   return (
     <>
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
