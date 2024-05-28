@@ -25,7 +25,7 @@ const Home = () => {
             <img src={chardham4} class="d-block w-100" alt="..." />
           </div>
           <div className="heading">
-            <h1 className='mb-0'>Welcome to Shiva Holidays</h1>
+            <h1 className='mb-0'>Welcome to Shiva Tours Group</h1>
 
           </div>
         </div>
