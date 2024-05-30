@@ -25,7 +25,7 @@ const Home = () => {
           <div class="carousel-item">
             <img src={chardham4} class="d-block w-100" alt="..." />
           </div>
-          <div className="heading">
+          <div className="heading p-3">
             <h1 className='mb-0 fs-1'>Welcome to Shiva Tours Group</h1>
 
           </div>

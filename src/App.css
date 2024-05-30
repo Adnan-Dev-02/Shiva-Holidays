@@ -31,7 +31,7 @@
 }
 
 .scenic {
-  background-image: url("./pages/images/bg.webp"), linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0) );
+  background-image: url("./pages/images/bg.png"), linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0) );
   background-blend-mode: color;
   background-size: cover;
   background-position: center center;
