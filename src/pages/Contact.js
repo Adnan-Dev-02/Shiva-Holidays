@@ -45,7 +45,7 @@ const Contact = () => {
           </div>
 
           <h2 className='mt-5 mb-4'>Lets get social</h2>
-          <div className='mb-5'>
+          <div>
             <a href='https://www.facebook.com/profile.php?id=61558528687781&mibextid=kFxxJD'>
               <i class="me-4 fs-4 fa-brands fa-square-facebook text-primary"></i>
             </a>
