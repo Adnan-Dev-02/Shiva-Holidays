@@ -2,7 +2,6 @@ import React from 'react'
 import dodham from './images/2dham.jpg'
 import ekdham from './images/ekdham.jpg'
 import chardham from './images/chardham.jpg'
-
 import chardham2 from './images/chardham2.jpg'
 import chardham3 from './images/chardham3.jpg'
 import chardham4 from './images/chardham4.jpg'

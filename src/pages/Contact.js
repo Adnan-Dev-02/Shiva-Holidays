@@ -33,7 +33,7 @@ const Contact = () => {
           <h2 className='mb-4'>Get in touch</h2>
           <div className='mb-2'>
             <i class="fa-solid fa-phone text-primary me-2"></i>
-            <p className='d-inline'>+91 73793 67831</p>
+            <a href='https://wa.me/message/JM5VTN6W4H6OD1' className='d-inline text-decoration-none text-black'>+91 73793 67831</a>
           </div>
           <div className='mb-2'>
             <i class="fa-solid fa-envelope me-2 text-danger"></i>
