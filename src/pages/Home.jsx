@@ -12,6 +12,20 @@ import kullumanali from './images/kullumanali.jpg'
 import Footer from './Footer'
 import { Link } from 'react-router-dom'
 
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const phoneNumber = event.target.elements.phone.value;
+  const message = encodeURIComponent(event.target.elements.message.value); // Encode special characters
+  const date = encodeURIComponent(event.target.elements.date.value); // Encode special characters
+  const location = encodeURIComponent(event.target.elements.location.value); // Encode special characters
+
+  const whatsappUrl = `https://wa.me/7379367831?text=${message}%0A${date}+"\n"+${location}+"\n"+${phoneNumber}`;
+
+
+  window.open(whatsappUrl, '_blank'); // Open link in new tab
+}
+
 const Home = () => {
   return (
     <>
@@ -43,7 +57,7 @@ const Home = () => {
           <span class="visually-hidden">Next</span>
         </button>
       </header>
-      <div className="p-5 scenic">
+      <form className="p-5 scenic" onSubmit={handleFormSubmit}>
         <p className='fs-4 text-success'>Scenic Marvels</p>
         <p className='fs-1'>
           Uncover Captivating Destinations
@@ -52,23 +66,36 @@ const Home = () => {
         <div className='bg-white my-4 p-4 shadow rounded'>
           <i class="fa-solid fa-mountain-sun text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Holidays</h5>
-          <input type="text" className='border-0 w-100 mb-3' placeholder='where are you going' />
+          {/* <input type="text" className='border-0 w-100 mb-3' placeholder='where are you going' /> */}
+          <select name="location" id="" className='border-0 w-100 mb-3 text-secondary' required>
+
+            <option value="">Chardham</option>
+            <option value="">Do dham</option>
+            <option value="">Ek dham</option>
+            <option value="">Kullu Manali</option>
+            <option value="">Shimla</option>
+            <option value="">Goa</option>
+          </select>
 
           <i class="fa-regular fa-calendar-days text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Dates</h5>
-          <input type="date" className='border-0 w-100 text-secondary text-uppercase mb-3' />
+          <input type="date" className='border-0 w-100 text-secondary text-uppercase mb-3' required name='date'/>
 
           <i class="fa-solid fa-user text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Guests</h5>
-          <input type="number" className='border-0 w-100 mb-3' placeholder='Number of persons' />
+          <input type="number" className='border-0 w-100 mb-3' placeholder='Number of persons' required name='message'/>
 
-          <Link className="w-100 h-100 text-decoration-none text-white" to="/Tours">
-            <button className='btn btn-danger w-100'  >
+          <i class="fa-solid fa-phone text-danger d-inline me-2"></i>
+          <h5 className='d-inline-block mb-2'>Mobile Number</h5>
+          <input type="number" className='border-0 w-100 mb-3' placeholder='Mobile Number' required name='phone'/>
+
+          {/* <Link className="w-100 h-100 text-decoration-none text-white" to="/Tours"> */}
+            <button className='btn btn-danger w-100' type='submit' >
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-          </Link>
-        </div>
-      </div>
+          {/* </Link> */}
+        </div> 
+      </form>
       <div className="p-3 p-lg-5">
         <h2 className='mb-4'>Popular Destinations</h2>
         <div className="d-flex align-items-center justify-content-around row container-fluid m-0 w-100 gap-2">
