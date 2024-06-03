@@ -16,11 +16,11 @@ function handleFormSubmit(event) {
   event.preventDefault();
 
   const phoneNumber = event.target.elements.phone.value;
-  const message = encodeURIComponent(event.target.elements.message.value); // Encode special characters
+  const guests = encodeURIComponent(event.target.elements.guests.value); // Encode special characters
   const date = encodeURIComponent(event.target.elements.date.value); // Encode special characters
   const location = encodeURIComponent(event.target.elements.location.value); // Encode special characters
 
-  const whatsappUrl = `https://wa.me/7379367831?text=${message}%0A${date}+"\n"+${location}+"\n"+${phoneNumber}`;
+  const whatsappUrl = `https://wa.me/7379367831?text=Date: ${date}%0AGuests: ${guests}%0ALocation: ${location}%0AMobile Number: ${phoneNumber}`;
 
 
   window.open(whatsappUrl, '_blank'); // Open link in new tab
@@ -66,16 +66,16 @@ const Home = () => {
         <div className='bg-white my-4 p-4 shadow rounded'>
           <i class="fa-solid fa-mountain-sun text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Holidays</h5>
-          {/* <input type="text" className='border-0 w-100 mb-3' placeholder='where are you going' /> */}
-          <select name="location" id="" className='border-0 w-100 mb-3 text-secondary' required>
+          <input type="text" className='border-0 w-100 mb-3' placeholder='where are you going' required name='location'/>
+          {/* <select name="location" id="" className='border-0 w-100 mb-3 text-secondary' required>
 
             <option value="">Chardham</option>
             <option value="">Do dham</option>
             <option value="">Ek dham</option>
             <option value="">Kullu Manali</option>
             <option value="">Shimla</option>
-            <option value="">Goa</option>
-          </select>
+            <option value="">Goa</option> */}
+          {/* </select> */}
 
           <i class="fa-regular fa-calendar-days text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Dates</h5>
@@ -83,7 +83,7 @@ const Home = () => {
 
           <i class="fa-solid fa-user text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Guests</h5>
-          <input type="number" className='border-0 w-100 mb-3' placeholder='Number of persons' required name='message'/>
+          <input type="number" className='border-0 w-100 mb-3' placeholder='Number of persons' required name='guests'/>
 
           <i class="fa-solid fa-phone text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Mobile Number</h5>
