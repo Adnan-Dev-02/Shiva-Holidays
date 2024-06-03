@@ -32,7 +32,7 @@ function handleEnquirySubmit(event) {
   const location = encodeURIComponent(event.target.elements.location.value); // Encode special characters
   const name = encodeURIComponent(event.target.elements.name.value); // Encode special characters
   const email = encodeURIComponent(event.target.elements.email.value); // Encode special characters
-  const address = encodeURIComponent(event.target.elements.email.value); // Encode special characters
+  const address = encodeURIComponent(event.target.elements.address.value); // Encode special characters
 
   const whatsappUrl = `https://wa.me/7379367831?text=Date: ${date}%0AGuests: ${guests}%0ALocation: ${location}%0AMobile Number: ${phoneNumber}%0AName: ${name}%0AEmail: ${email}%0AAddress: ${address}`;
 
