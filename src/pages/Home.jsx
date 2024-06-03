@@ -7,10 +7,8 @@ import dodham from './images/2dham.jpg'
 import ekdham from './images/ekdham.jpg'
 import goa from './images/goa.jpg'
 import shimla from './images/shimla.jpg'
-import chardham4 from './images/chardham4.jpg'
 import kullumanali from './images/kullumanali.jpg'
 import Footer from './Footer'
-import { Link } from 'react-router-dom'
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -22,6 +20,21 @@ function handleFormSubmit(event) {
 
   const whatsappUrl = `https://wa.me/7379367831?text=Date: ${date}%0AGuests: ${guests}%0ALocation: ${location}%0AMobile Number: ${phoneNumber}`;
 
+  window.open(whatsappUrl, '_blank'); // Open link in new tab
+}
+
+function handleEnquirySubmit(event) {
+  event.preventDefault();
+
+  const phoneNumber = event.target.elements.phone.value;
+  const guests = encodeURIComponent(event.target.elements.guests.value); // Encode special characters
+  const date = encodeURIComponent(event.target.elements.date.value); // Encode special characters
+  const location = encodeURIComponent(event.target.elements.location.value); // Encode special characters
+  const name = encodeURIComponent(event.target.elements.name.value); // Encode special characters
+  const email = encodeURIComponent(event.target.elements.email.value); // Encode special characters
+  const address = encodeURIComponent(event.target.elements.email.value); // Encode special characters
+
+  const whatsappUrl = `https://wa.me/7379367831?text=Date: ${date}%0AGuests: ${guests}%0ALocation: ${location}%0AMobile Number: ${phoneNumber}%0AName: ${name}%0AEmail: ${email}%0AAddress: ${address}`;
 
   window.open(whatsappUrl, '_blank'); // Open link in new tab
 }
@@ -66,35 +79,35 @@ const Home = () => {
         <div className='bg-white my-4 p-4 shadow rounded'>
           <i class="fa-solid fa-mountain-sun text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Holidays</h5>
-          <input type="text" className='border-0 w-100 mb-3' placeholder='where are you going' required name='location'/>
-          {/* <select name="location" id="" className='border-0 w-100 mb-3 text-secondary' required>
+          {/* <input type="text" className='border-0 w-100 mb-3' placeholder='where are you going' required name='location' /> */}
+          <select name="location" id="" className='border-0 w-100 mb-3 text-secondary' required>
 
-            <option value="">Chardham</option>
-            <option value="">Do dham</option>
-            <option value="">Ek dham</option>
-            <option value="">Kullu Manali</option>
-            <option value="">Shimla</option>
-            <option value="">Goa</option> */}
-          {/* </select> */}
+            <option value="Chardham">Chardham</option>
+            <option value="Do Dham">Do dham</option>
+            <option value="Ek Dham">Ek dham</option>
+            <option value="Kullu Manali">Kullu Manali</option>
+            <option value="Shimla">Shimla</option>
+            <option value="Goa">Goa</option>
+          </select>
 
           <i class="fa-regular fa-calendar-days text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Dates</h5>
-          <input type="date" className='border-0 w-100 text-secondary text-uppercase mb-3' required name='date'/>
+          <input type="date" className='border-0 w-100 text-secondary text-uppercase mb-3' required name='date' />
 
           <i class="fa-solid fa-user text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Guests</h5>
-          <input type="number" className='border-0 w-100 mb-3' placeholder='Number of persons' required name='guests'/>
+          <input type="number" className='border-0 w-100 mb-3' placeholder='Number of persons' required name='guests' />
 
           <i class="fa-solid fa-phone text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Mobile Number</h5>
-          <input type="number" className='border-0 w-100 mb-3' placeholder='Mobile Number' required name='phone'/>
+          <input type="number" className='border-0 w-100 mb-3' placeholder='Mobile Number' required name='phone' />
 
           {/* <Link className="w-100 h-100 text-decoration-none text-white" to="/Tours"> */}
-            <button className='btn btn-danger w-100' type='submit' >
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+          <button className='btn btn-danger w-100' type='submit' >
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
           {/* </Link> */}
-        </div> 
+        </div>
       </form>
       <div className="p-3 p-lg-5">
         <h2 className='mb-4'>Popular Destinations</h2>
@@ -177,6 +190,33 @@ const Home = () => {
         <h2 className='mb-3'>Our Location</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4014.4577933168216!2d77.18618452857694!3d32.21115057170117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDEyJzM5LjkiTiA3N8KwMTEnMDkuOSJF!5e0!3m2!1sen!2sin!4v1717179817185!5m2!1sen!2sin" height="450" allowfullscreen="" className='w-100 shadow rounded' loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      <form className='p-3 p-lg-5' onSubmit={handleEnquirySubmit}>
+        <h2 className='text-center'>Enquiry Form</h2>
+        <p className='mb-1'>Name *</p>
+        <input type="text" name="name" id="" placeholder='Your Name' className='w-100 p-2 mb-3' required />
+        <p className='mb-1'>Email *</p>
+        <input type="email" name="email" id="" placeholder='example@gmail.com' className='w-100 p-2 mb-3' required />
+        <p className='mb-1'>Phone *</p>
+        <input type="number" name="phone" id="" placeholder='12345 67890' className='w-100 p-2 mb-3' required />
+        <p className='mb-1'>Address *</p>
+        <input type="text" name="address" id="" placeholder='Your Address' className='w-100 p-2 mb-3' required />
+        <p className='mb-1'>Check in *</p>
+        <input type="date" name="date" id="" placeholder='Your Address' className='w-100 p-2 mb-3' required />
+        <p className='mb-1'>Guests *</p>
+        <input type="number" name="guests" id="" placeholder='2' className='w-100 p-2 mb-3' required />
+
+        <p className='mb-1'>Package *</p>
+        <select name="location" id="" className='w-100 p-2 mb-3 text-secondary' required>
+
+          <option value="Chardham">Chardham</option>
+          <option value="Do Dham">Do dham</option>
+          <option value="Ek Dham">Ek dham</option>
+          <option value="Kullu Manali">Kullu Manali</option>
+          <option value="Shimla">Shimla</option>
+          <option value="Goa">Goa</option>
+        </select>
+        <button className='btn btn-success w-100 mt-2' type='submit' >Submit</button>
+      </form>
       <div className=" bg-danger text-white row container-fluid m-0 w-100">
         <div className="col-sm-4 p-3 p-lg-5">
           <i class="fa-solid fa-earth-asia fs-1"></i>
