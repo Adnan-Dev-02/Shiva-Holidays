@@ -88,7 +88,7 @@ const Home = () => {
             <option value="Kullu Manali">Kullu Manali</option>
             <option value="Shimla">Shimla</option>
             <option value="Goa">Goa</option>
-          </select>
+          </select> 
 
           <i class="fa-regular fa-calendar-days text-danger d-inline me-2"></i>
           <h5 className='d-inline-block mb-2'>Dates</h5>
@@ -190,6 +190,32 @@ const Home = () => {
         <h2 className='mb-3'>Our Location</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4014.4577933168216!2d77.18618452857694!3d32.21115057170117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDEyJzM5LjkiTiA3N8KwMTEnMDkuOSJF!5e0!3m2!1sen!2sin!4v1717179817185!5m2!1sen!2sin" height="450" allowfullscreen="" className='w-100 shadow rounded' loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+
+      <div className="p-3 p-lg-5">
+        <h2 className='text-center'>What our clients say</h2>
+        <div className="row container-fluid m-0 p-3 d-flex justify-content-around">
+          <div className="col-sm-5 p-3 shadow rounded m-1">
+            <h5>Rajiv's</h5>
+            <p>Manali tour was breathtaking! The sights were surreal, and the service impeccable. A delightful blend of culture and nature. Highly recommended for an authentic and serene experience.</p>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+          </div>
+          <div className="col-sm-5 p-3 shadow rounded m-1">
+            <h5>Priya</h5>
+            <p>Dalhousie tour was a serene escape! The tranquility of the hills and impeccable arrangements made it an unforgettable journey. The perfect retreat for a peaceful vacation.</p>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+            <i class="fa-solid fa-star text-warning d-inline"></i>
+
+          </div>
+        </div>
+      </div>
+
       <form className='p-3 p-lg-5' onSubmit={handleEnquirySubmit}>
         <h2 className='text-center'>Enquiry Form</h2>
         <p className='mb-1'>Name *</p>
